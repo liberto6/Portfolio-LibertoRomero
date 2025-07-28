@@ -1,0 +1,86 @@
+---
+import Modal from './Modal.astro';
+import DownloadCVModal from './DownloadCVModal.astro';
+
+---
+
+<div class="relative w-[65vw] mx-auto mt-8 md:mt-0 md:w-full bg-[#121222] rounded-2xl shadow-lg pt-20 px-4 pb-6 text-white max-w-full ">
+  <!-- Imagen flotante -->
+  <img
+    class="absolute -top-20 left-1/2 transform -translate-x-1/2 w-32 h-32 object-cover rounded-full"
+    src="images/FotoCVsinfondo.png"
+    alt="FotoCV"
+  />
+
+  <div class="text-center">
+    <h5 class="text-lg font-bold mt-2">Liberto Romero Camacho</h5>
+    <p class="text-xs text-gray-400 mt-1" data-i18n="role">Ingeniero Informático</p>
+
+    <!-- Social -->
+    <div class="flex justify-center gap-3 mt-3">
+      <a
+        href="https://www.linkedin.com/in/liberto-romero-camacho-676072232/"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="text-green-500 hover:text-green-300"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" class="w-5 h-5" fill="currentColor">
+          <path d="M41,4H9C6.24,4,4,6.24,4,9v32c0,2.76,2.24,5,5,5h32c2.76,0,5-2.24,5-5V9C46,6.24,43.76,4,41,4z M17,20v19h-6V20H17z M11,14.47c0-1.4,1.2-2.47,3-2.47s2.93,1.07,3,2.47c0,1.4-1.12,2.53-3,2.53C12.2,17,11,15.87,11,14.47z M39,39h-6c0,0,0-9.26,0-10 c0-2-1-4-3.5-4.04h-0.08C27,24.96,26,27.02,26,29c0,0.91,0,10,0,10h-6V20h6v2.56c0,0,1.93-2.56,5.81-2.56 c3.97,0,7.19,2.73,7.19,8.26V39z" />
+        </svg>
+      </a>
+    </div>
+
+    <!-- Contact Info -->
+    <div class="mt-5 space-y-4 text-left text-sm">
+      <div class="flex items-start gap-3">
+        <div class="p-2 rounded-full bg-gray-800">
+          <svg xmlns="http://www.w3.org/2000/svg" class="size-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z" />
+          </svg>
+        </div>
+        <div>
+          <p class="text-xs text-gray-400" data-i18n="phone">Phone</p>
+          <p class="text-sm font-medium">+34 647347847</p>
+        </div>
+      </div>
+
+      <div class="flex items-start gap-3">
+        <div class="p-2 rounded-full bg-gray-800">
+          <svg xmlns="http://www.w3.org/2000/svg" class="size-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9 3.75H6.912a2.25 2.25 0 0 0-2.15 1.588L2.35 13.177a2.25 2.25 0 0 0-.1.661V18a2.25 2.25 0 0 0 2.25 2.25h15A2.25 2.25 0 0 0 21.75 18v-4.162c0-.224-.034-.447-.1-.661L19.24 5.338a2.25 2.25 0 0 0-2.15-1.588H15M2.25 13.5h3.86a2.25 2.25 0 0 1 2.012 1.244l.256.512a2.25 2.25 0 0 0 2.013 1.244h3.218a2.25 2.25 0 0 0 2.013-1.244l.256-.512a2.25 2.25 0 0 1 2.013-1.244h3.859M12 3v8.25m0 0-3-3m3 3 3-3" />
+          </svg>
+        </div>
+        <div>
+          <p class="text-xs text-gray-400" data-i18n="email">Email</p>
+          <p class="text-sm font-medium break-words">liberto3dejulio@gmail.com</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Download Button -->
+    <div class="flex flex-col mt-4 text-center gap-3">
+      <a data-modal-target="aboutModal" data-modal-toggle="aboutModal"
+        class="mt-1 items-center self-end gap-2 text-xs font-medium text-white hover:underline opacity-65 hover:opacity-100 transition cursor-pointer"
+        data-i18n="moreAbout">
+        More about me!
+        <img src="/arrowSidebar.svg" alt="Arrow" class="w-4 h-4 rotate-90" />
+      </a>
+
+      <!-- Modal insertado -->
+      <Modal />
+
+      <!-- Botón que lanza el modal -->
+    <button 
+      data-modal-target="cvModal" 
+      data-modal-toggle="cvModal"
+      class="bg-emerald-500 hover:bg-emerald-600 text-white text-xs font-semibold py-2 px-4 rounded-full shadow"
+      data-i18n="downloadCV"
+    >
+      Descargar CV
+    </button>
+    <DownloadCVModal />
+
+
+    </div>
+  </div>
+</div>

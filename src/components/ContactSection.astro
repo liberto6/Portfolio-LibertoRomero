@@ -1,0 +1,62 @@
+<section id="contact" class="bg-[#121222] text-white p-6 rounded-xl shadow-md space-y-6">
+  <!-- Frase -->
+  <h2 class="text-lg font-bold">
+    <span data-i18n="contactHeadline">💬 La mejor forma de resolver una duda... </span>
+    <span class="text-emerald-400" data-i18n="contactHighlight">es preguntarla.</span>
+  </h2>
+
+  <p class="text-sm text-gray-400" data-i18n="contactDesc">
+    No dudes en escribirme si tienes alguna pregunta, propuesta o idea. Estoy abierto a escuchar y colaborar.
+  </p>
+
+  <!-- Formulario conectado a Formspree -->
+  <form
+    action="https://formspree.io/f/mdkdgneb"
+    method="POST"
+    class="space-y-4"
+  >
+    <div>
+      <label for="name" class="block text-sm font-medium text-gray-300" data-i18n="nameLabel">Nombre</label>
+      <input
+        type="text"
+        id="name"
+        name="name"
+        required
+        class="mt-1 w-full rounded-md bg-[#1c1c2b] border border-white/10 p-2 text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500"
+      />
+    </div>
+
+    <div>
+      <label for="email" class="block text-sm font-medium text-gray-300" data-i18n="emailLabel">Email</label>
+      <input
+        type="email"
+        id="email"
+        name="email"
+        required
+        class="mt-1 w-full rounded-md bg-[#1c1c2b] border border-white/10 p-2 text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500"
+      />
+    </div>
+
+    <div>
+      <label for="message" class="block text-sm font-medium text-gray-300" data-i18n="messageLabel">Mensaje</label>
+      <textarea
+        id="message"
+        name="message"
+        rows="5"
+        required
+        class="resize-none mt-1 w-full rounded-md bg-[#1c1c2b] border border-white/10 p-2 text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500"
+      ></textarea>
+    </div>
+
+    <!-- Honeypot (anti-bot invisible field) -->
+    <input type="text" name="_gotcha" style="display:none" />
+
+    <button
+      type="submit"
+      class="bg-emerald-500 hover:bg-emerald-600 text-white text-sm font-semibold px-4 py-2 rounded-full transition"
+      data-i18n="sendMessage"
+    >
+      Enviar mensaje
+    </button>
+  </form>
+</section>

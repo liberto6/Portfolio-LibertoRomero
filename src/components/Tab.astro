@@ -1,0 +1,48 @@
+---
+import HomSection from "../components/HomeSection.astro";
+import ContactSection from "./ContactSection.astro";
+import ProjectsSection from "./ProjectsSection.astro";
+import EducationSection from "./EducationSection.astro";
+---
+
+<div id="default-styled-tab-content" class="w-full h-full ">
+  <!-- Home -->
+  <div
+    class="hidden w-full h-full"
+    id="styled-home"
+    role="tabpanel"
+    aria-labelledby="home-tab"
+  >
+    <HomSection />
+  </div>
+
+  <!-- Projects -->
+  <div
+    class="hidden w-full h-full"
+    id="styled-proyectos"
+    role="tabpanel"
+    aria-labelledby="proyectos-tab"
+  >
+    <ProjectsSection />
+  </div>
+
+  <!-- Formación -->
+  <div
+    class="hidden w-full h-full"
+    id="styled-formacion"
+    role="tabpanel"
+    aria-labelledby="formacion-tab"
+  >
+    <EducationSection />
+  </div>
+
+  <!-- Contacto -->
+  <div
+    class="hidden w-full h-full"
+    id="styled-contacto"
+    role="tabpanel"
+    aria-labelledby="contacto-tab"
+  >
+    <ContactSection />
+  </div>
+</div>

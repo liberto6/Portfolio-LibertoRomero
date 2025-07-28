@@ -1,0 +1,22 @@
+---
+// EducationModal.astro
+const { id, title, content } = Astro.props;
+---
+
+<div id={id} tabindex="-1" aria-hidden="true"
+  class="fixed inset-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto bg-black/50 backdrop-blur-sm items-center justify-center">
+  <div class="relative w-full max-w-md max-h-full animate-fade-slide-up">
+    <div class="relative bg-[#1c1c2b] rounded-lg shadow p-6 text-white">
+      <!-- Cierre -->
+      <button type="button"
+        class="absolute top-2 right-2 text-gray-400 hover:text-white rounded-lg text-sm w-8 h-8 flex justify-center items-center"
+        data-modal-hide={id}>
+        ✕
+      </button>
+
+      <!-- Contenido -->
+      <h3 class="text-lg font-semibold mb-3">{title}</h3>
+      <p class="text-sm text-gray-300 leading-relaxed whitespace-pre-line">{content}</p>
+    </div>
+  </div>
+</div>

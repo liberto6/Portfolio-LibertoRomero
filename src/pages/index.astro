@@ -1,0 +1,38 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Sidebar from "../components/Sidebar.astro";
+import Tab from '../components/Tab.astro';
+import Navbar from '../components/Navbar.astro';
+---
+
+<Layout>
+  
+ <div class="flex flex-col lg:flex-row justify-center py-6 px-4 gap-6">
+  <!-- Sidebar (apilado arriba en mobile) -->
+  <aside class="w-full lg:w-[280px] lg:mt-[73px]">
+      <Sidebar />
+    </aside>
+
+  <!-- Main content -->
+  <section class="flex flex-col w-full lg:w-[640px] max-w-full">
+
+    <!-- Navbar -->
+    <div class="w-full flex justify-center lg:justify-end mb-4">
+      <!-- Botón interruptor de idioma -->
+      <div class="absolute left-4 top-4 z-50">
+        <button id="lang-toggle" class="flex items-center gap-2 px-3 py-1.5 bg-[#0e0e1b] text-white text-xs font-semibold rounded-full border border-white/10 shadow hover:bg-emerald-600 transition">
+          <span id="lang-label">ES</span>
+          <img id="lang-flag" src="/flags/es.svg" alt="flag" class="w-4 h-4" />
+        </button>
+      </div>
+      <Navbar />
+    </div>
+
+    <!-- Tab content -->
+    <div class="w-[85vw] lg:w-full mx-auto bg-[#121222] rounded-xl p-4 shadow-md">
+      <Tab />
+    </div>
+
+  </section>
+</div>
+</Layout>
