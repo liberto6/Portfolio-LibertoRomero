@@ -1,4 +1,4 @@
-import { translations } from '/i18n.js';
+import { translations } from '.i18n.js';
 
 const langBtn = document.getElementById("lang-toggle");
 const label = document.getElementById("lang-label");
