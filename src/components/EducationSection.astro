@@ -6,21 +6,19 @@ import EducationModal from "./EducationModal.astro";
   <h2 class="text-lg font-bold mb-6" data-i18n="education">🎓 Formación</h2>
 
   <ol class="relative border-s border-white/10 space-y-6">
-
     <!-- Grado Ingeniería Informática -->
     <li class="ms-4">
-      
       <div class="absolute -start-1.5 top-0 w-3 h-3 bg-emerald-500 rounded-full border border-white/10"></div>
-       <time class="text-xs text-gray-400">2021 – 2025</time>
+      <time class="text-xs text-gray-400">2021 – 2025</time>
 
       <button
         data-modal-target="modal-degree"
         data-modal-toggle="modal-degree"
-        class="text-sm font-semibold text-white underline hover:text-emerald-400 transition">
+        class="text-sm font-semibold text-white underline hover:text-emerald-400 transition"
+        data-i18n="degreeTitle">
         Grado en Ingeniería Informática de Tecnologías Informáticas
       </button>
-      <p class="text-xs text-gray-400">Universidad de Sevilla</p>
-
+      <p class="text-xs text-gray-400" data-i18n="university">Universidad de Sevilla</p>
     </li>
 
     <!-- Curso Microsoft Dataverse -->
@@ -29,10 +27,11 @@ import EducationModal from "./EducationModal.astro";
       <button
         data-modal-target="modal-dataverse"
         data-modal-toggle="modal-dataverse"
-        class="text-sm font-semibold text-white underline hover:text-cyan-400 transition">
+        class="text-sm font-semibold text-white underline hover:text-cyan-400 transition"
+        data-i18n="dataverseTitle">
         Curso Microsoft Dataverse
       </button>
-      <p class="text-xs text-gray-400">Microsoft Power Platform</p>
+      <p class="text-xs text-gray-400" data-i18n="dataverseDesc">Gestión de datos y automatización de procesos (Microsoft Power Platform)</p>
     </li>
 
     <!-- Microcredencial Google Cloud -->
@@ -41,30 +40,27 @@ import EducationModal from "./EducationModal.astro";
       <button
         data-modal-target="modal-cloud"
         data-modal-toggle="modal-cloud"
-        class="text-sm font-semibold text-white underline hover:text-yellow-300 transition">
-        Microcredencial Google Cloud – Associate Cloud Engineer
+        class="text-sm font-semibold text-white underline hover:text-yellow-300 transition"
+        data-i18n="cloudTitle">
+        Microcredencial Associate Cloud Engineer – Google Cloud
       </button>
-      <p class="text-xs text-gray-400">Google Cloud Platform</p>
+      <p class="text-xs text-gray-400" data-i18n="cloudDesc">Formación en infraestructura y gestión de Google Cloud Platform</p>
     </li>
-
   </ol>
 
   <!-- Modales -->
   <EducationModal
     id="modal-degree"
-    title="Grado en Ingeniería Informática"
-    content={`He adquirido una sólida base en estructuras de datos, algoritmos, programación orientada a objetos (Java, Python), bases de datos, redes y sistemas operativos. 
-También me he familiarizado con metodologías de desarrollo de software y trabajo en equipo.`} />
+    title="degreeTitle"
+    content={`degreeModal`} />
 
   <EducationModal
     id="modal-dataverse"
-    title="Curso Microsoft Dataverse"
-    content={`Aprendí a diseñar tablas relacionales y automatizar procesos de negocio usando Power Automate. 
-El curso me permitió comprender cómo integrar datos y crear soluciones empresariales sin código.`} />
+    title="dataverseTitle"
+    content={`dataverseModal`} />
 
   <EducationModal
     id="modal-cloud"
-    title="Google Cloud – Associate Cloud Engineer"
-    content={`Adquirí conocimientos sobre despliegue de servicios en la nube, configuración de redes, gestión de máquinas virtuales, y uso de herramientas como Cloud Shell y GCP Console.
-También aprendí los fundamentos de seguridad, IAM y escalado de infraestructuras.`} />
+    title="cloudTitle"
+    content={`cloudModal`} />
 </section>
